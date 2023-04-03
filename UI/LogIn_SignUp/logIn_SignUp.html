@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Аккаунт ComputerShop</title>
+
+    <link rel="stylesheet" href="./logIn_SignUp.css" />
+    <script src="./logIn_SignUp.js"></script>
+</head>
+
+<body>
+    <!-- Выпадающее меню -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">О нас</a>
+        <a href="#">Наши услуги</a>
+        <a href="#">Отзывы клиентов</a>
+        <a href="#">Контакты</a>
+    </div>
+    <span onclick="openNav()"><img src="https://drive.google.com/uc?export=view&id=1RnUOaCrONeNO7aD5C5XJKUbJ__auDMrO" alt="Image of menu" width="40px" style="padding-top: 40px; padding-left: 40px;"></span>
+
+    <!-- Форма для входа и регистрации -->
+    <form>
+        <input checked="" id="signin" name="action" type="radio" value="signin" />
+        <label for="signin">Sign in</label>
+        <input id="signup" name="action" type="radio" value="signup" />
+        <label for="signup">Sign up</label>
+        <input id="reset" name="action" type="radio" value="reset" />
+        <label for="reset">Восстановить пароль</label>
+        <div id="wrapper">
+            <div id="arrow"></div>
+            <input id="email" placeholder="Email" type="text" autocomplete="off"/>
+            <input id="pass" placeholder="Пароль" type="password" autocomplete="off"/>
+            <input id="repass" placeholder="Повторите пароль" type="password" autocomplete="off"/>
+        </div>
+        <button type="submit">
+        <span>
+          Сбросить пароль
+          <br />
+          Sign in
+          <br />
+          Sign up
+        </span>
+      </button>
+    </form>
+    <!-- Footer -->
+    <footer>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin">
+                        <ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Отзывы клиентов</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>©2023 ComputerShop | All Rights Reserved</p>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./logIn_SignUp.js"></script>
+    </footer>
+</body>
+
+</html>

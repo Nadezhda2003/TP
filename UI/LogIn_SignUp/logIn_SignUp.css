@@ -30,7 +30,12 @@ body {
     font-family: "Raleway", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
-
+/* Logo */
+.logo
+{
+    float: right;
+    margin: 28px 15px;
+}
 
 /* Выпадающее меню */
 

@@ -1,0 +1,253 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background: #1f2029;
+    color: #c4c3ca;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+/* Logo */
+.logo
+{
+    float: right;
+    margin: 30px 50px;
+}
+
+/* Выпадающее меню */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2a2b38;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    color: #717179;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #c4c3ca;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Главное содержимое */
+/* Окна */
+.fone
+{
+    margin-top: 80px;
+    text-align: center;
+}
+.fone-image
+{
+    width: 760px;
+    height: 300px;
+    position: relative;
+}
+
+.inner{
+    position: absolute;
+    width: 300px;
+    display: block;
+    margin-right:487px;
+    margin-left: 487px;
+    margin-top: -160px;
+}
+.container
+{
+    float: center;
+    display: flex;
+    margin-top: 0;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background-color: #c4c3ca;
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 100px;
+    flex: 1;
+    transition: .3s all ease;
+}
+.card:hover {
+    flex: 2;
+    background-color: #ffeba7;
+}
+.rem, .download {
+    width: 50px;
+}
+.cart, .buy
+{
+    width: 45px;
+}
+
+
+.card .rem, .card .buy, .card .cart, .card .download{
+    display: block;
+    margin: 10px auto; 
+}
+.card .link{
+    margin-top: -5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+.card .link1{
+    margin-top: -10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+/* Reason */
+.reason
+{
+    background-color: #2a2b38;
+}
+.textableroot
+{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.box
+{
+    text-align: center;
+}
+.box .cell
+{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin: 0 20px;
+    width: 40%;
+    height: 120px;
+}
+.textable
+{
+    font-size: 13px;
+    color: #efe9e9;
+    padding-top: 8px;
+    font-family: "Raleway-latin-ext", sans-serif;
+}
+.text
+{
+    margin-bottom: 5px;
+    color: #ffeba7;
+    font-size: 17px;
+    margin-top: 8px;
+}
+.cont {
+    background-color: #2a2b38;
+}
+.td.icon
+{
+    float: left;
+    margin-top: 5px;
+}
+/* Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 10px -8px;
+    background: #2a2b38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.social,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social li,
+.menu li {
+    list-style: none;
+}
+
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}

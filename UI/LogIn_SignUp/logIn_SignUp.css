@@ -4,26 +4,6 @@ html {
     margin: 0;
 }
 
-:focus {
-    outline: none;
-}
-
-::-webkit-input-placeholder {
-    color: #c4c3ca;
-}
-
-::-moz-placeholder {
-    color: #c4c3ca;
-}
-
-:-moz-placeholder {
-    color: #c4c3ca;
-}
-
-::-ms-input-placeholder {
-    color: #c4c3ca;
-}
-
 body {
     background: #1f2029;
     color: #c4c3ca;

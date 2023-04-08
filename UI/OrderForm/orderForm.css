@@ -1,0 +1,203 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background: #1f2029;
+    color: #c4c3ca;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+/* Logo */
+.logo
+{
+    float: right;
+    margin: 30px 50px;
+}
+
+/* Выпадающее меню */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2a2b38;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    color: #717179;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #c4c3ca;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+/* Форма для оформления заказа */
+
+form {
+    width: 600px;
+    height: 400px;
+    margin: -185px -280px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.orderform
+{
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    background: #2a2b38;
+    color:#ecf8c4;
+    border: none;
+    border-radius: 8px;
+    font-size: 27px;
+    font-family: "Raleway", sans-serif;
+    height: 72px;
+    width: 99.5%;
+    margin-bottom: 10px;
+    opacity: 1;
+    text-indent: 20px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+select{
+    background: #2a2b38;
+    color: #ecf8c4;
+    border-radius: 8px;
+    border: none;
+    font-size: 27px;
+    font-family: "Raleway", sans-serif;
+    height: 72px;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 1;
+    text-indent: 20px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+select option:first-child{
+    color: #757575;
+}
+
+button {
+    background: #ffeba7;
+    border: none;
+    border-radius: 8px;
+    color: #050f32;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-size: 27px;
+    height: 72px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+
+button:hover {
+    background: #555c71;
+    color: #ffeba7;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 10px -8px;
+    background: #2a2b38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 900px;
+}
+
+
+.social,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social li,
+.menu li {
+    list-style: none;
+}
+
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}

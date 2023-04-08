@@ -17,6 +17,12 @@ body {
     margin: 30px 50px;
 }
 
+.cart
+{
+    margin-left: 2%;
+    margin-bottom: .2%;
+}
+
 /* Выпадающее меню */
 .sidenav {
     height: 100%;

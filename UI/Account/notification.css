@@ -1,0 +1,381 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background: #1f2029;
+    color: #c4c3ca;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Logo */
+.logo {
+    float: right;
+    margin: 30px 50px;
+}
+
+.cart {
+    margin-left: 2%;
+    margin-bottom: .2%;
+}
+
+/* Выпадающее меню */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2a2b38;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    color: #717179;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #c4c3ca;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Аккаунт */
+.row {
+    margin-top: 3%;
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.col-lg-8 {
+    margin-left: 7%;
+    width: 50%;
+    /* Поменять окна слева */
+}
+
+.col-lg-4 {
+    margin-right: 7%;
+    width: 30%;
+    /* Поменять окно справа */
+}
+
+.card {
+    background: #2a2b38;
+    margin-bottom: 5%;
+    border-radius: 8px;
+}
+
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+    font-weight: 500;
+    font-size: 25px;
+    background: #363849;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+}
+
+.card.card-header-actions.mb-4 .card-header {
+    padding-bottom: 2.5rem;
+}
+
+.form-check.form-switch {
+    position: absolute;
+    margin-top: .5%;
+}
+
+.form-check.form-switch .form-check-input {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: #c6c6c6;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.form-check.form-switch .form-check-input:checked {
+    background: #ffeba7;
+}
+
+.form-check.form-switch .form-check-input::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: #fbfbfb;
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.form-check.form-switch .form-check-input:checked::before {
+    left: 20px;
+}
+
+.nav-borders .nav-link.active {
+    color: #ffeba7;
+    border-bottom-color: #ffeba7;
+}
+
+.nav-borders .nav-link {
+    color: #c4c3ca;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+.container-xl.px-4.mt-4 {
+    margin-top: 5%;
+}
+
+.nav.nav-borders {
+    margin-left: 5%;
+}
+
+
+.form-check {
+    margin-top: 2%;
+    padding-bottom: 3%;
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.form-check.mb-2 {
+    padding-bottom: 0;
+    color: #c4c3ca;
+}
+
+.form-check.mb-5, .form-check.mb-3 {
+    color: #c4c3ca;
+}
+
+.card-body .mb-3, .card-body .mb-0 {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+
+.card-body .mb-0 .form-check-input, .card-body .form-check-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.col-lg-4 .card-body .form-check.mb-2 {
+    margin-left: 5%;
+}
+
+.form-check-input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.form-check-input+label::before {
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.form-check-input:checked+label::before {
+    border-color: #ffeba7;
+    background-color: #ffeba7;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%232a2b38' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.form-check-input:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #fffab3;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.form-check-input:not(:disabled):active+label::before {
+    background-color: #f7ffb3;
+    border-color: #fcffb3;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.form-check-input:focus+label::before {
+    box-shadow: 0 0 0 0.2rem #fffcbc;
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.form-check-input:focus:not(:checked)+label::before {
+    border-color: #fff080;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.form-check-input:disabled+label::before {
+    background-color: #feffed;
+    cursor: default;
+}
+
+.small, .small.mb-2 {
+    font-size: 15px;
+    font-family: "Raleway-vietnamese", sans-serif;
+    color: #f3f3f3;
+}
+
+.form-control {
+    display: block;
+    width: 90%;
+    margin-top: 1%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    color: #ecf8c4;
+    background-color: #383b51;
+    background-clip: padding-box;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+}
+
+.btn.btn-danger-soft.text-danger {
+    vertical-align: middle;
+    background-color: #ffeba7;
+    color: #050f32;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 5%;
+    width: 70%;
+    height: 40px;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.btn.btn-danger-soft.text-danger:hover {
+    background: #555c71;
+    color: #ffeba7;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 10px -8px;
+    background: #2a2b38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+
+.social,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social li,
+.menu li {
+    list-style: none;
+}
+
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}

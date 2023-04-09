@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Профиль ComputerShop</title>
+    <link rel="stylesheet" href="./profile.css" />
+</head>
+
+<body>
+    <!-- Выпадающее меню -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Главная</a>
+        <a href="#">Личный кабинет</a>
+        <a href="#">Наши услуги</a>
+        <a href="#">Отзывы клиентов</a>
+        <a href="#">Контакты</a>
+    </div>
+    <span onclick="openNav()"><img src="https://drive.google.com/uc?export=view&id=1RnUOaCrONeNO7aD5C5XJKUbJ__auDMrO"
+            alt="Image of menu" width="40px" style="padding-top: 40px; padding-left: 40px;"></span>
+    <a href="#" class="cart-href"><img class="cart"
+            src="https://drive.google.com/uc?export=view&id=1IKTAVThNQHPoiOGLpWJ5_fPeH-E7b613" width="40px"
+            alt="cart"></a>
+    <img class="logo" src="https://drive.google.com/uc?export=view&id=1rqJigSUaXbgGWQXFolSZnu_AyhUukjWp" alt="logo"
+        width="200px">
+    <!-- Профиль -->
+    <div class="container-xl px-4 mt-4">
+        <nav class="nav nav-borders">
+            <a class="nav-link active ms-0" href="./profile.html" target="__blank">Профиль</a>
+            <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-billing-page" target="__blank">Ваши покупки</a>
+            <a class="nav-link" href="./security.html" target="__blank">Безопасность</a>
+            <a class="nav-link" href="./notification.html"  target="__blank">Уведомления</a>
+        </nav>
+        <hr class="mt-0 mb-4">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card mb-4 mb-xl-0">
+                    <div class="card-header">Фото профиля</div>
+                    <div class="card-body text-center">
+                        <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                        <div class="small font-italic text-muted mb-4">JPG or PNG не более, чем 5 MB</div>
+                        <button class="btn btn-primary" type="button">Загрузить фото</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8">
+                <div class="card mb-4">
+                    <div class="card-header">Информация пользователя</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="small mb-1 one" for="inputUsername">Username (имя, которое будут видеть другие пользователи на сайте)</label>
+                                <input class="form-control" id="inputUsername" type="text" placeholder="Введите username" value="GoodHope">
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputFirstName">Имя</label>
+                                    <input class="form-control two" id="inputFirstName" type="text" placeholder="Введите Ваше имя" value="Надежда">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLastName">Отчество</label>
+                                    <input class="form-control" id="inputLastName" type="text" placeholder="Введите Ваше отчество" value="Сергеевна">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputOrgName">Фамилия</label>
+                                    <input class="form-control two" id="inputOrgName" type="text" placeholder="Введите Вашу фамилию" value="Василевская">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLocation">Город</label>
+                                    <input class="form-control" id="inputLocation" type="text" placeholder="Введите Ваш город" value="Минск">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1 one" for="inputEmailAddress">Адрес электронной почты</label>
+                                <input class="form-control" id="inputEmailAddress" type="email" placeholder="Введите Ваш email" value="hope@example.com">
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPhone">Номер телефона</label>
+                                    <input class="form-control two" id="inputPhone" type="tel" placeholder="Введите Ваш номер телефона" value="+375 (29) 196 18 34">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputBirthday">Дата рождения</label>
+                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Введите Вашу дату рождения" value="06/10/1988">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary one" type="button">Сохранить изменения</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin">
+                        <ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Отзывы клиентов</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>©2023 ComputerShop | All Rights Reserved</p>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./account.js"></script>
+    </footer>
+</body>
+
+</html>

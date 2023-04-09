@@ -1,0 +1,354 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background: #1f2029;
+    color: #c4c3ca;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Logo */
+.logo {
+    float: right;
+    margin: 30px 50px;
+}
+
+.cart {
+    margin-left: 2%;
+    margin-bottom: .2%;
+}
+
+/* Выпадающее меню */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2a2b38;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    color: #717179;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #c4c3ca;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Аккаунт */
+.row {
+    margin-top: 3%;
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.col-lg-8 {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.col-lg-4 {
+    width: 35%;
+    margin-right: 5%;
+}
+
+.card .card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+    font-weight: 500;
+    font-size: 25px;
+    background: #363849;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+}
+
+.card {
+    background: #2a2b38;
+    margin-bottom: 5%;
+    border-radius: 8px;
+}
+
+.form-control {
+    display: block;
+    width: 90%;
+    margin-top: 1%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    color: #ecf8c4;
+    background-color: #383b51;
+    background-clip: padding-box;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+}
+
+.mt-3 {
+    padding-bottom: 3%;
+}
+
+.card-body .mb-3, .card-body .mb-0 {
+    margin-top: 2%;
+}
+
+.form-check {
+    margin-top: 2%;
+    padding-bottom: 3%;
+    font-size: 16px;
+    color: #8c8c8c;
+}
+
+.form-check.mb-2 {
+    padding-bottom: 0;
+}
+
+.mb-1 {
+    font-size: 20px;
+    margin: 2% 0;
+    color: #ffeba7;
+}
+
+.small, .card-body p {
+    font-size: 15px;
+    font-family: "Raleway-vietnamese", sans-serif;
+    color: #c4c3ca;
+}
+
+.form-check-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form-check-input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.form-check-input+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.form-check-input:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #fffbb3;
+}
+
+.form-check-input:not(:disabled):active+label::before {
+    background-color: #fbffb3;
+    border-color: #ffffb3;
+}
+
+.form-check-input:focus+label::before {
+    box-shadow: 0 0 0 0.2rem #fbffb3;
+}
+
+.form-check-input:focus:not(:checked)+label::before {
+    border-color: #fffd80;
+}
+
+.form-check-input:checked+label::before {
+    border-color: #ffeba7;
+    background-color: #ffeba7;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%232a2b38'/%3e%3c/svg%3e");
+}
+
+.form-check-input:disabled+label::before {
+    background-color: #eeefe9;
+}
+
+.btn.btn-primary {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    width: 20%;
+    height: 35px;
+    vertical-align: middle;
+    background-color: #ffeba7;
+    color: #050f32;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+    background: #555c71;
+    color: #ffeba7;
+}
+
+.btn.btn-danger-soft.text-danger {
+    vertical-align: middle;
+    background-color: #ffeba7;
+    color: #050f32;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+    width: 90%;
+    height: 40px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.btn.btn-danger-soft.text-danger:hover {
+    background: #555c71;
+    color: #ffeba7;
+}
+
+.card-body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.nav-borders .nav-link.active {
+    color: #ffeba7;
+    border-bottom-color: #ffeba7;
+}
+
+.nav-borders .nav-link {
+    color: #c4c3ca;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+.container-xl.px-4.mt-4 {
+    margin-top: 5%;
+}
+
+.nav.nav-borders {
+    margin-left: 5%;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 10px -8px;
+    background: #2a2b38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+
+.social,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social li,
+.menu li {
+    list-style: none;
+}
+
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Уведомления ComputerShop</title>
+    <link rel="stylesheet" href="./notification.css" />
+</head>
+
+<body>
+    <!-- Выпадающее меню -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Главная</a>
+        <a href="#">Личный кабинет</a>
+        <a href="#">Наши услуги</a>
+        <a href="#">Отзывы клиентов</a>
+        <a href="#">Контакты</a>
+    </div>
+    <span onclick="openNav()"><img src="https://drive.google.com/uc?export=view&id=1RnUOaCrONeNO7aD5C5XJKUbJ__auDMrO"
+            alt="Image of menu" width="40px" style="padding-top: 40px; padding-left: 40px;"></span>
+    <a href="#" class="cart-href"><img class="cart"
+            src="https://drive.google.com/uc?export=view&id=1IKTAVThNQHPoiOGLpWJ5_fPeH-E7b613" width="40px"
+            alt="cart"></a>
+    <img class="logo" src="https://drive.google.com/uc?export=view&id=1rqJigSUaXbgGWQXFolSZnu_AyhUukjWp" alt="logo"
+        width="200px">
+    <!-- Уведомления -->
+    <div class="container-xl px-4 mt-4">
+        <nav class="nav nav-borders">
+            <a class="nav-link ms-0" href="./profile.html" target="__blank">Профиль</a>
+            <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-billing-page"
+                target="__blank">Ваши покупки</a>
+            <a class="nav-link" href="./security.html" target="__blank">Безопасность</a>
+            <a class="nav-link active" href="./notification.html" target="__blank">Уведомления</a>
+        </nav>
+        <hr class="mt-0 mb-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card card-header-actions mb-4">
+                    <div class="card-header">
+                        Уведомления по электронной почте
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputNotificationEmail">Электронная почта для уведомлений
+                                    по умолчанию</label>
+                                <input class="form-control" id="inputNotificationEmail" type="email"
+                                    value="name@example.com" disabled="">
+                            </div>
+                            <div class="mb-0">
+                                <label class="small mb-2">Выберите, какие типы обновлений по электронной почте Вы будете
+                                    получать</label>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkAccountChanges" type="checkbox" checked="">
+                                    <label class="form-check-label" for="checkAccountChanges">Изменения, внесенные в
+                                        Вашу учетную запись</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkProductUpdates" type="checkbox" checked="">
+                                    <label class="form-check-label" for="checkProductUpdates">Обновления продуктов,
+                                        которые Вы приобрели</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkProductNew" type="checkbox" checked="">
+                                    <label class="form-check-label" for="checkProductNew">Информация о новых
+                                        ​​услугах</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkPromotional" type="checkbox">
+                                    <label class="form-check-label" for="checkPromotional">Маркетинговые и рекламные
+                                        предложения</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="checkSecurity" type="checkbox" checked=""
+                                        disabled="">
+                                    <label class="form-check-label" for="checkSecurity">Предупреждения
+                                        безопасности</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card card-header-actions mb-4">
+                    <div class="card-header">
+                        Всплывающее уведомление
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="smsToggleSwitch" type="checkbox" checked="">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputNotificationSms">Номер SMS по умолчанию</label>
+                                <input class="form-control" id="inputNotificationSms" type="tel" value="123-456-7890"
+                                    disabled="">
+                            </div>
+                            <div class="mb-0">
+                                <label class="small mb-2">Выберите, какие типы push-уведомлений Вы будете
+                                    получать</label>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkSmsComment" type="checkbox" checked="">
+                                    <label class="form-check-label" for="checkSmsComment">Кто-то прокомментировал Ваш
+                                        отзыв</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" id="checkSmsGroup" type="checkbox">
+                                    <label class="form-check-label" for="checkSmsGroup">Обновление статуса Вашего
+                                        заказа</label>
+                                </div>
+                                <div class="form-check mb-5">
+                                    <input class="form-check-input" id="checkSmsPrivateMessage" type="checkbox"
+                                        checked="">
+                                    <label class="form-check-label" for="checkSmsPrivateMessage">Вы получили сообщение
+                                        от компании</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">Настройки уведомлений</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" id="checkAutoGroup" type="checkbox" checked="">
+                                <label class="form-check-label" for="checkAutoGroup">Автоматически подписываться на
+                                    уведомления</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" id="checkAutoProduct" type="checkbox">
+                                <label class="form-check-label" for="checkAutoProduct">Автоматически подписываться на
+                                    уведомления о новых продуктах</label>
+                            </div>
+                            <button class="btn btn-danger-soft text-danger">Отписаться от всех уведомлений</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin">
+                        <ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Отзывы клиентов</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>©2023 ComputerShop | All Rights Reserved</p>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./account.js"></script>
+    </footer>
+</body>
+
+</html>

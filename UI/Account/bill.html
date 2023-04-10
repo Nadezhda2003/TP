@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Профиль ComputerShop</title>
+    <link rel="stylesheet" href="./bill.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Выпадающее меню -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Главная</a>
+        <a href="#">Личный кабинет</a>
+        <a href="#">Наши услуги</a>
+        <a href="#">Отзывы клиентов</a>
+        <a href="#">Контакты</a>
+    </div>
+    <span onclick="openNav()"><img src="https://drive.google.com/uc?export=view&id=1RnUOaCrONeNO7aD5C5XJKUbJ__auDMrO"
+            alt="Image of menu" width="40px" style="padding-top: 40px; padding-left: 40px;"></span>
+    <a href="#" class="cart-href"><img class="cart"
+            src="https://drive.google.com/uc?export=view&id=1IKTAVThNQHPoiOGLpWJ5_fPeH-E7b613" width="40px"
+            alt="cart"></a>
+    <img class="logo" src="https://drive.google.com/uc?export=view&id=1rqJigSUaXbgGWQXFolSZnu_AyhUukjWp" alt="logo"
+        width="200px">
+    <!-- Зазазы -->
+    <div class="container-xl px-4 mt-4">
+        <nav class="nav nav-borders">
+            <a class="nav-link ms-0" href="./profile.html" target="__blank">Профиль</a>
+            <a class="nav-link active" href="./bill.html" target="__blank">Ваши покупки</a>
+            <a class="nav-link" href="./security.html" target="__blank">Безопасность</a>
+            <a class="nav-link" href="./notification.html"  target="__blank">Уведомления</a>
+        </nav>
+        <hr class="mt-0 mb-4">
+        <div class="card card-header-actions mb-4">
+            <div class="card-header">
+                Payment Methods
+                <button class="btn btn-sm btn-primary" type="button">Добавить способ оплаты</button>
+            </div>
+            <div class="card-body px-0">
+                <div class="d-flex align-items-center justify-content-between px-4">
+                    <div class="d-flex align-items-center">
+                         <i class="fab fa-cc-visa fa-2x cc-color-visa"></i>
+                        <div class="ms-4">
+                            <div class="small">Visa заканчивается на 1234</div>
+                            <div class="text-xs text-muted">Истекает 04/2024</div>
+                        </div>
+                    </div>
+                    <div class="ms-4 small">
+                        <div class="badge bg-light text-dark me-3">По умолчанию</div>
+                        <a href="#!" class="href-one">Редактировать</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between px-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fab fa-cc-mastercard fa-2x cc-color-mastercard"></i>
+                        <div class="ms-4">
+                            <div class="small">Mastercard с номером 5678</div>
+                            <div class="text-xs text-muted">Истекает 05/2022</div>
+                        </div>
+                    </div>
+                    <div class="ms-4 small">
+                        <a class="text-muted me-3" href="#!">Использовать по умолчанию</a>
+                        <a href="#!">Редактировать</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between px-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fab fa-cc-amex fa-2x cc-color-amex"></i>
+                        <div class="ms-4">
+                            <div class="small">American Express заканчивается на 9012</div>
+                            <div class="text-xs text-muted">Истекает 01/2026</div>
+                        </div>
+                    </div>
+                    <div class="ms-4 small">
+                        <a class="text-muted me-3" href="#!">Использовать по умолчанию</a>
+                        <a href="#!">Редактировать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">История заказов</div>
+            <div class="card-body p-0">
+                <div class="table-responsive table-billing-history">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="border-gray-200" scope="col">ID транзакции</th>
+                                <th class="border-gray-200" scope="col">Дата</th>
+                                <th class="border-gray-200" scope="col">Сумма</th>
+                                <th class="border-gray-200" scope="col">Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#39201</td>
+                                <td>06/15/2021</td>
+                                <td>500 Br</td>
+                                <td><span class="badge bg-light text-dark">Оплачивается</span></td>
+                            </tr>
+                            <tr>
+                                <td>#38594</td>
+                                <td>05/15/2021</td>
+                                <td>2 000 Br</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                            </tr>
+                            <tr>
+                                <td>#38223</td>
+                                <td>04/15/2021</td>
+                                <td>3 000 Br</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                            </tr>
+                            <tr>
+                                <td>#38125</td>
+                                <td>03/15/2021</td>
+                                <td>5 400 Br</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin">
+                        <ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Отзывы клиентов</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>©2023 ComputerShop | All Rights Reserved</p>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./account.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -99,3 +99,15 @@ function removeElem(delElem, attribute, attributeName) {
     };
 }
 document.addEventListener("click", removeElem("product", "data-del", "delete"));
+
+//Нажатие кнопки купить
+function changeBackground(){
+	document.body.style.background = 'red';
+}
+document.querySelector('button.checkout').onclick = function ()
+{
+    if (list.length != 0)
+        window.location.href = "../OrderForm/orderForm.html";
+    else
+    window.location.href = "../Error/error.html";
+}

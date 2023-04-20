@@ -87,7 +87,8 @@ function removeElem(delElem, attribute, attributeName) {
         //После мы производим поиск элемента, который нужно удалить. Поиск идет снизу вверх. За счет того, что кнопки находяться внутри "card", то мы точно удалить нужный нам "card"(сорри за тавтологию).
         while (target != this) {
             if (target.classList.contains(delElem)) {
-                list.splice(list.indexOf(target), 1);
+                let x = list.find(el => el.id === target.id);
+                list.splice(list.indexOf(x), 1);
                 document.getElementById('cart-subtotal').textContent = Total(list);
                 target.remove();
                 return;

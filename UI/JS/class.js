@@ -2,17 +2,6 @@ class Person {
     constructor() {
         this.cart = new Cart();
     }
-    getCategory(event) {
-        var output = document.getElementsByClassName('product-line-price');
-        let target = event.target;
-        for (let i = 0; i < item.length; i++) {
-            if (target == item[i]) {
-                this.cart.list[item.length - (i + 1)].count = Number(target.value);
-                output[i + 1].textContent = this.cart.list[item.length - (i + 1)].count * this.cart.list[item.length - (i + 1)].price;
-                document.getElementById('cart-subtotal').textContent = this.Total();
-            }
-        }
-    }
     Total() {
         let total_sum = 0;
         this.cart.list.forEach(el => {
@@ -35,33 +24,6 @@ class Person {
                 </div>`);
         });
         document.getElementById('cart-subtotal').innerHTML = this.Total();
-    }
-
-
-    removeElem(delElem, attribute, attributeName) {
-        //проверка на наличие всех аргументов.
-        if (!(delElem && attribute && attributeName)) return;
-        //возвращаем функцию, которая будет иметь доступ к аргументам, и при этом будет в себе хранить объект события.
-        return function(e) {
-            //Узнаем на каком элементе был произведен клик.
-            let target = e.target;
-            //Делаем проверку на наличие атрибута "data-del", и проверяем на наличие параметра "delete".
-            if (!(target.hasAttribute(attribute) ?
-                    (target.getAttribute(attribute) === attributeName ? true : false) : false)) return;
-            let elem = target;
-            //После мы производим поиск элемента, который нужно удалить. Поиск идет снизу вверх. За счет того, что кнопки находяться внутри "card", то мы точно удалить нужный нам "card"(сорри за тавтологию).
-            while (target != this) {
-                if (target.classList.contains(delElem)) {
-                    let x = this.cart.list.find(el => el.id === target.id);
-                    this.cart.list.splice(list.indexOf(x), 1);
-                    document.getElementById('cart-subtotal').textContent = this.Total();
-                    target.remove();
-                    return;
-                }
-                target = target.parentNode;
-            }
-            return;
-        };
     }
 }
 class Cart {
@@ -96,8 +58,12 @@ class Cart {
             this.list[index].count += 1;
             return;
         }
-        if (value.title == 'Ремонт компьютера' || value.title == "Установка ПО" || value.title == "Продажа компьютера")
+        if (value.title == 'Ремонт компьютера')
             code_v = 2;
+        else if (value.title == "Установка ПО")
+            code_v = 3;
+        else if (value.title == "Продажа компьютера")
+            code_v = 4;
         this.list.push({
             id: id_v,
             code: code_v,
